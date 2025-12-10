@@ -1,0 +1,105 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{ 
+    background-image: url("https://www.hdwallpapers.in/download/mountains_in_dark_night_background_hd_dark-HD.jpg"); 
+    background-size: cover; 
+    color: rgb(161, 158, 158);
+} 
+div#box{
+    margin: auto;
+    /* background-color: yellow;  */
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+div#container{
+    height: 400px;
+    width: 900px;
+    background-color: rgba(3,2,33,0.8); 
+    border-radius: 20px; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 10%;
+}
+#eventName{
+    background-color: inherit;
+    border: none;
+    height: 5rem;
+    width: 100%;
+    transition: 1s;
+    font-size: 3rem;
+    text-align: center;
+}
+#eventName:focus{
+    border: 2px solid grey;
+    outline: none;
+}
+button{
+
+    padding: 3% 5%;
+    /* margin: auto;  */
+    /* margin-top: 80px;  */
+    border-radius: 20px;
+    transition: 1s ease;
+} 
+/* button:hover{
+    transform: scale(1.1);
+    border: 5px solid red;
+    scale: 1.2;
+} */
+.time{
+    height: 300px;
+    width: 250px;  
+    font-size: 150px;  
+    background-color: transparent; 
+    border: none;
+}
+.description{
+    font-size: 2.5rem;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    height: 100vh;
+}
+
+form{
+    border-radius: 20px;
+    padding: 10px;
+    margin: auto;
+    width: 50vh;
+    height: 50vh;
+    background-color: rgba(3,2,33,0.8); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form>div>input{
+    background-color: rgb(3,2,33); 
+    color: rgb(84, 83, 83);
+    border: none;
+}
+form>div{
+    margin-bottom: 50px;
+}
+form>div>label{
+    font-size: 1.7rem;
+}
+form>div>input::-webkit-calendar-picker-indicator {
+    filter: invert(1) brightness(200%);
+}
+#Event{
+    font-size: 3rem;
+}

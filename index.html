@@ -3,98 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title> 
-    <style> 
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        body{ 
-            background-image: url("https://www.hdwallpapers.in/download/mountains_in_dark_night_background_hd_dark-HD.jpg"); 
-            background-size: cover; 
-        } 
-        div#box{
-            height: 100vh;
-            width: 100vw;
-            margin: auto;
-            /* background-color: yellow;  */
-            display: grid;
-            justify-content: center; 
-            align-content: center;
-        } 
-        div#container{
-            height: 400px;
-            width: 900px;
-            background-color: rgb(3,2,33); 
-            border-radius: 20px; 
-            display: flex;
-            justify-content: center; 
-            align-items: center;
-        } 
-        button{
-            padding: 40px;  
-            width: 200px; 
-            margin: auto; 
-            margin-top: 80px; 
-            border-radius: 20px;
-        } 
-        button:hover{
-            transform: translateY(-10px);
-            transition: 1s ease;
-            border: 5px solid red;
-            scale: 1.2;
-        }
-        .time{
-            height: 300px;
-            width: 250px;  
-            color: grey;
-            font-size: 150px;  
-            background-color: transparent; 
-        }
-    </style>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <section>
+        <form>
+            <div>
+                <input type="text" id="eventName" placeholder="Enter Event Name" required>
+            </div>
+            <div>
+                <label for="targetDate">Event Date: </label>
+                <input type="date" id="targetDate" required>
+            </div>
+            <div>
+                <label for="targetTime">Event Time: </label>
+                <input type="time" id="targetTime" required>
+            </div>
+            <button id="subBtn">START</button>
+        </form>
+    </section>
+
     <div id="box">
+        <h1 id="Event">Event Name</h1>
         <div id="container">
-            <input type="text" placeholder="12:" class="time" id="hour">
-            <input type="text" placeholder="59:" class="time" id="minute">
-            <input type="text" placeholder="59" class="time" id="sec"> 
-        </div> 
-        <button id="start">START</button>
-    </div> 
-    <script>
-       document.getElementById("start").addEventListener("click", function () {
-
-    let h = Number(document.getElementById("hour").value) || 0;
-    let m = Number(document.getElementById("minute").value) || 0;
-    let s = Number(document.getElementById("sec").value) || 0;
-
-    let total = h * 3600 + m * 60 + s;
-
-    if (total <= 0) {
-        alert("Enter a valid time!");
-        return;
-    }
-
-    let timer = setInterval(() => {
-
-        if (total <= 0) {
-            clearInterval(timer);
-            alert("Time's up!");
-            return;
-        }
-
-        total--;
-
-        let hh = Math.floor(total / 3600);
-        let mm = Math.floor((total % 3600) / 60);
-        let ss = total % 60;
-
-        document.getElementById("hour").value = hh;
-        document.getElementById("minute").value = mm;
-        document.getElementById("sec").value = ss;
-    }, 1000);
-});
-    </script>
+            <span class="time" id="days">00:<br><span class="description">Day(s)</span></span>
+            <span class="time" id="hour">00:<br><span class="description">Hour(s)</span></span>
+            <span class="time" id="minute">00:<br><span class="description">Minute(s)</span></span>
+            <span class="time" id="second">00<br><span class="description">Second(s)</span></span>
+        </div>
+    </div>
+    <script src="script.js"></script> 
 </body>
 </html>

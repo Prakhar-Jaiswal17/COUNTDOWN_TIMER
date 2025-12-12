@@ -46,8 +46,6 @@ div#container{
 #subBtn{
 
     padding: 3% 5%;
-    /* margin: auto;  */
-    /* margin-top: 80px;  */
     border-radius: 20px;
     transition: 1s ease;
     border: none;
@@ -67,11 +65,7 @@ button:active{
     transition: 1s ease;
     display: none;
 }
-/* button:hover{
-    transdiv#section: scale(1.1);
-    border: 5px solid red;
-    scale: 1.2;
-} */
+
 .time{
     height: 300px;
     width: 250px;  

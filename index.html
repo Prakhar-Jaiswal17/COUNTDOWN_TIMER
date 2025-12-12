@@ -6,9 +6,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="top">
     <section>
-        <form>
+        <div id="section">
             <div>
                 <input type="text" id="eventName" placeholder="Enter Event Name" required>
             </div>
@@ -21,7 +21,7 @@
                 <input type="time" id="targetTime" required>
             </div>
             <button id="subBtn">START</button>
-        </form>
+        </div>
     </section>
 
     <div id="box">
@@ -32,6 +32,8 @@
             <span class="time" id="minute">00:<br><span class="description">Minute(s)</span></span>
             <span class="time" id="second">00<br><span class="description">Second(s)</span></span>
         </div>
+
+        <button id="reset">Reset</button>
     </div>
     <script src="script.js"></script> 
 </body>

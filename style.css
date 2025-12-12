@@ -43,16 +43,32 @@ div#container{
     border: 2px solid grey;
     outline: none;
 }
-button{
+#subBtn{
 
     padding: 3% 5%;
     /* margin: auto;  */
     /* margin-top: 80px;  */
     border-radius: 20px;
     transition: 1s ease;
-} 
+    border: none;
+}
+button:hover{
+    transform: scale(1.2);
+}
+button:active{
+    background-color: rgb(182, 182, 182);
+}
+#reset{
+    margin-top: 20px;
+    border-radius: 20px;
+    border: none;
+    height:40px;
+    width: 75px;
+    transition: 1s ease;
+    display: none;
+}
 /* button:hover{
-    transform: scale(1.1);
+    transdiv#section: scale(1.1);
     border: 5px solid red;
     scale: 1.2;
 } */
@@ -74,7 +90,7 @@ section{
     height: 100vh;
 }
 
-form{
+div#section{
     border-radius: 20px;
     padding: 10px;
     margin: auto;
@@ -86,18 +102,18 @@ form{
     justify-content: center;
     align-items: center;
 }
-form>div>input{
+div#section>div>input{
     background-color: rgb(3,2,33); 
     color: rgb(84, 83, 83);
     border: none;
 }
-form>div{
+div#section>div{
     margin-bottom: 50px;
 }
-form>div>label{
+div#section>div>label{
     font-size: 1.7rem;
 }
-form>div>input::-webkit-calendar-picker-indicator {
+div#section>div>input::-webkit-calendar-picker-indicator {
     filter: invert(1) brightness(200%);
 }
 #Event{

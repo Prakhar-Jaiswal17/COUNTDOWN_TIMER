@@ -38,7 +38,7 @@ btn.onclick=()=>{
     }
     clearInterval(intervalId);
     eventHeading.innerHTML=eventName;
-    eventHeading.style.color="grey";
+    // eventHeading.style.color="grey";
     countTime=new Date(targetDate+'T'+targetTime).getTime();
     // timer();
     intervalId=setInterval(timer,1000);
@@ -53,7 +53,7 @@ function timer(){
     let difference=countTime-currentTime;
     if(difference<0){
         eventHeading.innerHTML="Countdown Over!!";
-        eventHeading.style.color="rgba(228, 228, 228, 1)";
+        // eventHeading.style.color="rgba(228, 228, 228, 1)";
         rstBtn.style.display="block";
         clearInterval(intervalId);
         return;

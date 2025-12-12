@@ -117,5 +117,6 @@ div#section>div>input::-webkit-calendar-picker-indicator {
     filter: invert(1) brightness(200%);
 }
 #Event{
+    color: rgb(203, 201, 201);
     font-size: 3rem;
 }
